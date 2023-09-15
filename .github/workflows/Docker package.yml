@@ -37,7 +37,7 @@ jobs:
         - 
             name: downcase TAG
             run: |
-                TAG=ghcr.io/${{ github.repository }}/$IMAGE_NAME:latest
+                TAG=ghcr.io/${{ github.repository }}:latest
                 echo "TAG=${TAG,,}" >>${GITHUB_ENV}
         -
             name: Build and push
