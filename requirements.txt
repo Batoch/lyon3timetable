@@ -1,0 +1,4 @@
+flask==2.3.3
+beautifulsoup4==4.12.2
+icalendar==5.0.7
+requests==2.31.0
