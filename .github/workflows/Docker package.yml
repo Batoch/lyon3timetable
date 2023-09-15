@@ -31,10 +31,15 @@ jobs:
             uses: docker/setup-buildx-action@v3
             with:
                 version: latest
+        - 
+            name: downcase TAG
+            run: |
+                TAG=ghcr.io/${{ github.repository }}/$IMAGE_NAME:latest
+                TAG=$(echo $TAG | tr '[A-Z]' '[a-z]')
         -
             name: Build and push
             uses: docker/build-push-action@v5
             with:
                 push: true
-                tags: ghcr.io/$(echo ${{ github.repository }} | tr '[A-Z]' '[a-z]')/${{ IMAGE_NAME }}:latest
+                tags: $TAG
                 platforms: linux/amd64,linux/arm/v7,linux/arm64
