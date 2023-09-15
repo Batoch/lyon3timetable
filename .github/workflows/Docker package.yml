@@ -36,5 +36,5 @@ jobs:
             uses: docker/build-push-action@v5
             with:
                 push: true
-                tags: ghcr.io/${{ github.repository }}/$IMAGE_NAME:latest
+                tags: ghcr.io/$(echo ${{ github.repository }} | tr '[A-Z]' '[a-z]')/${{ IMAGE_NAME }}:latest
                 platforms: linux/amd64,linux/arm/v7,linux/arm64
