@@ -6,6 +6,9 @@ on:
             - main
     workflow_dispatch:
 
+env:
+  IMAGE_NAME: lyon3timetable
+
 jobs:
     release:
         runs-on: ubuntu-latest
@@ -31,8 +34,10 @@ jobs:
         -
             name: Build dockerfile (with push)
             run: |
+                IMAGE_ID=${{ github.repository }}/$IMAGE_NAME:latest
+                IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
                 docker buildx build \
                 --platform=linux/amd64,linux/arm/v7,linux/arm64 \
                 --output "type=image,push=true" \
                 --file ./Dockerfile . \
-                --tag ${{ github.repository }}/lyon3timetable:latest
+                --tag $IMAGE_ID
