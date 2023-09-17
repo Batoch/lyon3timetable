@@ -8,6 +8,7 @@ A Python script exposing lyon 3 university's timetable to an iCAL URL
 
 ### 1. Using Docker
 
+#### Using local build
 First, build the docker image:
 
 ```console
@@ -18,6 +19,14 @@ Then run it:
 
 ```console
 docker run -d --restart=on-failure --name lyon3timetable -p 5000:5000 -e USERNAME=<YOURUSERNAME eg.358...> -e PASSWORD='<YOURPASSWORD>' lyon3timetable
+```
+
+#### Using the repo
+
+Just run:
+
+```console
+docker run -d --restart=on-failure --name lyon3timetable -p 5000:5000 -e USERNAME=<YOURUSERNAME eg.358...> -e PASSWORD='<YOURPASSWORD>' ghcr.io/batoch/lyon3timetable:latest
 ```
 
 ### 2. Using Python Flask
