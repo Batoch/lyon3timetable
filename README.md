@@ -1,6 +1,8 @@
 # lyon3timetable
 
-A Python script exposing lyon 3 university's timetable to an iCAL URL
+A Python script exposing lyon 3 university's timetable to an iCAL URL.
+
+The URL is <serverip>/calendar
 
 ## Deployment
 
