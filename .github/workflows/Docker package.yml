@@ -1,4 +1,4 @@
-name: '[builder] Docker image for dockerhub'
+name: '[builder] Docker image for Github repo'
 
 on:
     push:
