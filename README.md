@@ -2,7 +2,7 @@
 
 A Python script exposing lyon 3 university's timetable to an iCAL URL.
 
-The URL is <serverip>/calendar
+The URL is ```<serverip>/calendar```
 
 ## Deployment
 
@@ -19,6 +19,7 @@ docker run -d --restart=on-failure --name lyon3timetable -p 5000:5000 -e USERNAM
 ```
 
 #### Using local build
+
 First, build the docker image:
 
 ```console
