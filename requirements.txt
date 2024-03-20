@@ -1,4 +1,4 @@
 flask==2.3.3
 beautifulsoup4==4.12.2
-icalendar==5.0.10
+icalendar==5.0.12
 requests==2.31.0
